@@ -17,6 +17,6 @@ describe('Controller: MainCtrl', function () {
   }));
 
   it('should attach a projectData.name to the scope', function () {
-    expect(scope.projectData.name).toBe('');
+    expect(scope.projectLoadSuccessAlert.enabled).toBe(false);
   });
 });

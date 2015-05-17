@@ -13,7 +13,8 @@ angular
     'ngAnimate',
     'ngResource',
     'ngRoute',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'highcharts-ng'
   ])
   .config(function ($routeProvider) {
     $routeProvider

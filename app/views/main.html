@@ -1,6 +1,6 @@
-<alert type="success" ng-hide="projectLoadSuccessAlert.enabled == false">Sucessfully loaded project {{projectData.name}}!</alert>
+<alert type="success" ng-hide="projectLoadSuccessAlert.enabled == false">Sucessfully loaded JSON file!</alert>
+<alert type="danger" ng-hide="badDataAlert.enabled == false">JSON data has the wrong format!</alert>
 <div class="panel panel-default">
-  <div class="panel-heading">Last JSON Loaded: <span class="text-info">{{projectData.name}}</span></div>
   <div class="panel-body">
     <table class="table-condensed">
       <tr>
@@ -9,11 +9,18 @@
             <span class="glyphicon glyphicon-arrow-up"></span>
             Load JSON file
           </button>
-          <input onchange="angular.element(this).scope().readJson(this, true)"
+          <input onchange="angular.element(this).scope().readJson(this)"
                  style="display:none" id="loadJsonfile" type="file" accept=".json"/>
         </td>
       </tr>
     </table>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <highchart id="chart1" config="chartConfig" class="span10"></highchart>
   </div>
 </div>
 
